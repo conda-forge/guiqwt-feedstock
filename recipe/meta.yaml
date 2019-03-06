@@ -27,7 +27,7 @@ requirements:
     - setuptools
     - pip
     - python
-    - pyqt
+    - pyqt  >=4,<5
     - pythonqwt
     - guidata
     - numpy
