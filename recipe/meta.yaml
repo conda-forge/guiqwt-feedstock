@@ -26,8 +26,10 @@ requirements:
   host:
     - setuptools
     - pip
-    - python
-    - pyqt>=4
+    - python =3.6.*
+    - pyqt  >=4,<5
+    # Build 2 crashes when importing QKeySequence, so don't use it!
+    - qt=4.8.7=7  # [linux]
     - pythonqwt
     - guidata
     - numpy
@@ -36,8 +38,9 @@ requirements:
     - pillow
 
   run:
-    - python
-    - pyqt
+    - python =3.6.*
+    - pyqt  >=4,<5
+    - qt=4.8.7=7  # [linux]
     - pythonqwt
     - guidata
     - numpy
