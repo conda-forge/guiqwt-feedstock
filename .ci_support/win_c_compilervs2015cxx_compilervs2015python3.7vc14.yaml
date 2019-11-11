@@ -9,15 +9,11 @@ cxx_compiler:
 numpy:
 - '1.14'
 pin_run_as_build:
-  pyqt:
-    max_pin: x.x
   python:
     min_pin: x.x
     max_pin: x.x
   vc:
     max_pin: x
-pyqt:
-- '5.9'
 python:
 - '3.7'
 vc:
