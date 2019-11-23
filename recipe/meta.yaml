@@ -20,16 +20,15 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
-    
   host:
     - python
     - pip
+    - cython
     - pyqt
     - pythonqwt
     - guidata
     - numpy
     - scipy
-    - cython
     - pillow
   run:
     - python
@@ -39,7 +38,6 @@ requirements:
     - numpy
     - scipy
     - pillow
-    - cython
 
 test:
   imports:
