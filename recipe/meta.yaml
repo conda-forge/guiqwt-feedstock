@@ -1,4 +1,4 @@
-{% set version = "3.0.4" %}
+{% set version = "3.0.5" %}
 
 package:
   name: guiqwt
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/PierreRaybaut/guiqwt/archive/v{{ version }}.tar.gz
-  sha256: d63bebf6a87e80560a6757b200d3f1fc6f850be958f1d65fe3f93abcd2855b32
+  sha256: 5453a238257f4b84cbbe3a6544a1bb0094a6ea932c7779e978073bc06378a3b8
   patches:
     # Needed to avoid some random exceptions which can make the application
     # crash
