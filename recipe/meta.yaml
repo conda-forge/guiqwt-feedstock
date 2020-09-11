@@ -1,4 +1,4 @@
-{% set version = "3.0.4" %}
+{% set version = "3.0.5" %}
 
 package:
   name: guiqwt
@@ -6,11 +6,7 @@ package:
 
 source:
   url: https://github.com/PierreRaybaut/guiqwt/archive/v{{ version }}.tar.gz
-  sha256: d63bebf6a87e80560a6757b200d3f1fc6f850be958f1d65fe3f93abcd2855b32
-  patches:
-    # Needed to avoid some random exceptions which can make the application
-    # crash
-    - curve.patch
+  sha256: 5453a238257f4b84cbbe3a6544a1bb0094a6ea932c7779e978073bc06378a3b8
 
 build:
   skip: true  # [win and vc<14]
@@ -23,25 +19,31 @@ requirements:
   host:
     - python
     - pip
+    - numpy
     - cython
-    - pyqt
-    - pythonqwt
     - guidata
-    - numpy
-    - scipy
     - pillow
+    - pythonqwt >=0.5.0
+    - qtpy >=1.3
+    - scipy >=0.7
+    - pyqt
   run:
-    - python
-    - pyqt
-    - pythonqwt
-    - guidata
-    - numpy
-    - scipy
+    - guidata >=1.7.0
+    - {{ pin_compatible('numpy') }}
     - pillow
+    - python
+    - pythonqwt >=0.5.0
+    - qtpy >=1.3
+    - scipy >=0.7
+    - pyqt
 
 test:
   imports:
     - guiqwt
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/PierreRaybaut/guiqwt
