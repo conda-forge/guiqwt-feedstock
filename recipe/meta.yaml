@@ -7,10 +7,6 @@ package:
 source:
   url: https://github.com/PierreRaybaut/guiqwt/archive/v{{ version }}.tar.gz
   sha256: 5453a238257f4b84cbbe3a6544a1bb0094a6ea932c7779e978073bc06378a3b8
-  patches:
-    # Needed to avoid some random exceptions which can make the application
-    # crash
-    - curve.patch
 
 build:
   skip: true  # [win and vc<14]
@@ -23,25 +19,22 @@ requirements:
   host:
     - python
     - pip
-    - cython
-    - pyqt
-    - pythonqwt
-    - guidata
-    - numpy
-    - scipy
-    - pillow
   run:
-    - python
-    - pyqt
-    - pythonqwt
-    - guidata
-    - numpy
-    - scipy
+    - guidata >=1.7.0
+    - numpy >=1.3
     - pillow
+    - python
+    - pythonqwt >=0.5.0
+    - qtpy >=1.3
+    - scipy >=0.7
 
 test:
   imports:
     - guiqwt
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://github.com/PierreRaybaut/guiqwt
