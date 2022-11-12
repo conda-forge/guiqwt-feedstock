@@ -1,4 +1,4 @@
-{% set version = "3.0.7" %}
+{% set version = "4.3.1" %}
 
 package:
   name: guiqwt
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://github.com/PierreRaybaut/guiqwt/archive/v{{ version }}.tar.gz
-  sha256: 801374cfdb8b7faa4d5c8737ac9bcaa7ebffe44abebf652a462a63dd60754311
+  sha256: 05d074b81d3c33fd634a748bfb2b6138806c9662873bae1a151101fc7fb97e65
 
 build:
   skip: true  # [win and vc<14]
-  number: 1
+  number: 0
 
 requirements:
   build:
