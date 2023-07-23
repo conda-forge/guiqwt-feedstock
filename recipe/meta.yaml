@@ -20,12 +20,13 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
     - numpy
     - cython
-    - guidata >=3.0
+    - guidata >=3.0.1
     - pyqt
   run:
-    - guidata >=3.0
+    - guidata >=3.0.1
     - {{ pin_compatible('numpy') }}
     - pillow
     - python
