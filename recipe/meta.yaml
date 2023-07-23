@@ -1,4 +1,4 @@
-{% set version = "4.4.0" %}
+{% set version = "4.4.1" %}
 
 package:
   name: guiqwt
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/PierreRaybaut/guiqwt/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 9b7d558294d53532c07b1d17f9b796b85c28dd2a18e6b52e8162decc74fc703a
+  sha256: 4427857b7aae80e3c157d4613158edc68b620428a066585adcdb5e0f05c5234f
 
 build:
   skip: true  # [win and vc<14]
@@ -20,12 +20,13 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
     - numpy
     - cython
-    - guidata >=3.0
+    - guidata >=3.0.1
     - pyqt
   run:
-    - guidata >=3.0
+    - guidata >=3.0.1
     - {{ pin_compatible('numpy') }}
     - pillow
     - python
