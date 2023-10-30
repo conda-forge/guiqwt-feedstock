@@ -1,4 +1,4 @@
-{% set version = "4.4.4" %}
+{% set version = "4.4.5" %}
 
 package:
   name: guiqwt
@@ -6,11 +6,11 @@ package:
 
 source:
   url: https://github.com/PierreRaybaut/guiqwt/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 1d16fb2ea714a247fd89d631fc37b7b7283091f1f163aadfa671f76ecd81c89e
+  sha256: 128c115e0f1ced462a321675a3a3ae79cb57f83154a967f96e4227057cce5f6b
 
 build:
   skip: true  # [win and vc<14]
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
