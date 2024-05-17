@@ -10,13 +10,14 @@ source:
 
 build:
   skip: true  # [win and vc<14]
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
     - {{ compiler('cxx') }}
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - cython                                 # [build_platform != target_platform]
@@ -31,7 +32,6 @@ requirements:
     - pyqt
   run:
     - guidata ==3.1
-    - {{ pin_compatible('numpy') }}
     - pillow
     - python
     - pythonqwt >=0.10
