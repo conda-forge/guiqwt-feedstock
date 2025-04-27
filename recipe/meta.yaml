@@ -7,10 +7,12 @@ package:
 source:
   url: https://github.com/PierreRaybaut/guiqwt/archive/refs/tags/v{{ version }}.tar.gz
   sha256: 128c115e0f1ced462a321675a3a3ae79cb57f83154a967f96e4227057cce5f6b
+  patches:
+    - guiqwt-numpy2.patch
 
 build:
   skip: true  # [win and vc<14]
-  number: 3
+  number: 4
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -28,10 +30,10 @@ requirements:
     - setuptools
     - numpy
     - cython
-    - guidata ==3.1
+    - guidata >=3.5.2,<=3.9.0
     - pyqt
   run:
-    - guidata ==3.1
+    - guidata >=3.5.2,<=3.9.0
     - pillow
     - python
     - pythonqwt >=0.10,<0.14.4
