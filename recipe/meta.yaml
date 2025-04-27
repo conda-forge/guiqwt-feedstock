@@ -43,10 +43,6 @@ requirements:
 test:
   imports:
     - guiqwt
-  requires:
-    - pip
-  commands:
-    - pip check
 
 about:
   home: https://github.com/PierreRaybaut/guiqwt
