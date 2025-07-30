@@ -12,6 +12,7 @@ source:
   sha256: 128c115e0f1ced462a321675a3a3ae79cb57f83154a967f96e4227057cce5f6b
   patches:
     - guiqwt-numpy2.patch
+    - guidata-version.patch
 
 build:
   number: 5
