@@ -15,7 +15,7 @@ source:
     - guidata-version.patch
 
 build:
-  number: 5
+  number: 6
   skip: win and vc<14
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
 
